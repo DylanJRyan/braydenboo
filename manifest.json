@@ -1,6 +1,6 @@
 {
-  "name": "Braydenboo",
-  "short_name": "TalkBoard",
+  "name": "Braydenboo's Words",
+  "short_name": "Braydenboo",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#f7f8fa",
@@ -19,3 +19,4 @@
   ]
 
 }
+
