@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+  />
+  <title>Braydens Talk Board</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header class="app-header" role="banner">
+    <h1 aria-label="Talk Board">Braydens Talk Board</h1>
+    <button class="btn icon" id="settingsBtn" aria-label="Open settings" title="Settings">⚙️</button>
+  </header>
+
+  <!-- Sentence strip -->
+  <section class="sentence-strip" aria-live="polite" aria-label="Sentence strip">
+    <div id="sentenceWords" class="sentence-words"></div>
+    <div class="strip-actions">
+      <button class="btn speak" id="speakBtn" aria-label="Speak sentence">Speak</button>
+      <button class="btn clear" id="clearBtn" aria-label="Clear sentence">Clear</button>
+    </div>
+  </section>
+
+  <!-- Category tabs -->
+  <nav class="tabs" role="tablist" aria-label="Categories">
+    <button class="tab active" role="tab" aria-selected="true" data-tab="needs">Needs</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="feelings">Feelings</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="actions">Actions</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="people">People</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="places">Places</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="favorites">Favorites</button>
+  </nav>
+
+  <!-- Grid of cards -->
+  <main class="grid" aria-label="Words">
+    <!-- Populated by script -->
+  </main>
+
+  <!-- Quick phrases (one-tap full sentence) -->
+  <section class="quick-phrases" aria-label="Quick phrases">
+    <h2>Quick phrases</h2>
+    <div class="quick-list" id="quickList">
+      <!-- Populated by script -->
+    </div>
+  </section>
+
+  <!-- Settings modal (simple) -->
+  <div class="modal" id="settingsModal" aria-hidden="true" role="dialog" aria-label="Settings">
+    <div class="modal-content">
+      <h3>Settings</h3>
+      <div class="settings-group">
+        <label class="switch">
+          <input type="checkbox" id="highContrastToggle" />
+          <span>High contrast mode</span>
+        </label>
+      </div>
+      <div class="settings-group">
+        <label>
+          Voice:
+          <select id="voiceSelect" aria-label="Voice select"></select>
+        </label>
+      </div>
+      <div class="settings-actions">
+        <button class="btn" id="closeSettings">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer controls -->
+  <footer class="app-footer" role="contentinfo">
+    <button class="btn" id="undoBtn" aria-label="Undo last word">Undo</button>
+    <button class="btn" id="repeatBtn" aria-label="Repeat last word">Repeat</button>
+    <button class="btn" id="biggerBtn" aria-label="Increase size">A+</button>
+    <button class="btn" id="smallerBtn" aria-label="Decrease size">A-</button>
+  </footer>
+
+  <script src="/src/main.js"></script>
+</body>
+</html>
