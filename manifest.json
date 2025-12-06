@@ -1,5 +1,5 @@
 {
-  "name": "Talk Board",
+  "name": "Braydenboo",
   "short_name": "TalkBoard",
   "start_url": "./index.html",
   "display": "standalone",
@@ -17,4 +17,5 @@
       "type": "image/png"
     }
   ]
+
 }
